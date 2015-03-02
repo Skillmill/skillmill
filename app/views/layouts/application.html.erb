@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Skillmill</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<%= link_to "Contact", pages_contact_path %>
+<%= link_to "About", pages_about_path %>
+
+<%= yield %>
+
+<p>&copy; 2015 SkillMill</p>
+</body>
+</html>
