@@ -7,11 +7,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= link_to "Contact", pages_contact_path %>
-<%= link_to "About", pages_about_path %>
+  <%= render 'layouts/navbar' %>
 
-<%= yield %>
-
-<p>&copy; 2015 SkillMill</p>
+  <%= yield %>
+  
+  <%= render 'layouts/footer' %>  
 </body>
 </html>
