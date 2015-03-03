@@ -12,6 +12,7 @@ html {
 body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
+  padding-top: 101px; 
 }
 
 .footer {
@@ -25,4 +26,18 @@ body {
 
 .center {
   text-align: center;
+}
+
+.navbar {
+  margin-bottom: 0px;
+  #menu-right {
+    margin-right: 0px;
+  }
+  .nav-menu {
+    background-color: #ebebeb;
+  }
+}
+
+#main-carousel {
+  height: 300px;
 }
