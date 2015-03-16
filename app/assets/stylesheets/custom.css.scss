@@ -15,6 +15,26 @@ body {
   padding-top: 101px; 
 }
 
+.jumbotron {
+  // color: #fefefe;
+  margin-bottom: 0px;
+  padding-top: 95px;
+  padding-bottom: 95px;
+}
+
+#services {
+  text-align: center;
+  padding: 48px;
+  img {
+    border-radius: 50%;
+    border: 8px solid #dddddd;
+    margin: 5px;
+  }
+  img:hover {
+    opacity: 0.85;
+  }
+}
+
 .footer {
   position: absolute;
   bottom: 0;
@@ -33,9 +53,9 @@ body {
   #menu-right {
     margin-right: 0px;
   }
-  .nav-menu {
-    background-color: #ebebeb;
-  }
+}
+#navbar-menu {
+  top: 50px;
 }
 
 #main-carousel {
