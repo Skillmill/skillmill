@@ -60,6 +60,9 @@ body {
 }
 #navbar-menu {
   top: 50px;
+  .navbar-nav>li {
+    float: none;
+  }
 }
 
 #main-carousel {
