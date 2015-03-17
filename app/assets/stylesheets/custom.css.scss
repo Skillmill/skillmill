@@ -60,6 +60,7 @@ body {
 }
 #navbar-menu {
   top: 50px;
+  z-index: 1029;
   .navbar-nav>li {
     float: none;
   }
