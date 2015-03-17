@@ -15,6 +15,9 @@
     <strong>Price:</strong>
     <%= @project.price %>
   </p>
+  
+  <p><%= image_tag @project.image_url %></p>
+  
 
   <%= link_to 'Edit', edit_project_path(@project), class: "btn btn-link" %> |
   <%= link_to 'Back', projects_path, class: "btn btn-link" %>
