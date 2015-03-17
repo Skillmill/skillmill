@@ -15,6 +15,7 @@ gem 'devise'
 gem 'carrierwave'
 gem 'fog'
 gem 'figaro'
+gem 'mini_magick'
 
 group :production do
   gem 'rails_12factor'
