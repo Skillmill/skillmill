@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   get 'pages/FAQ'
 
+  get 'myprojects' => "projects#customer"
+
   root 'pages#home'
 
   

@@ -1,5 +1,5 @@
 <div class="container-fluid">
-  <h1>Projects</h1>
+  <h1>My Project History</h1>
 
   <div class="row">
     <% @projects.each do |project| %>
@@ -11,6 +11,11 @@
             <p><%= number_to_currency(project.price) %></p>
             <p><%= "posted by #{ project.user.name }" %></p>
             <p><%= project.description %></p>
+
+            <% if (user_signed_in?) && (current_user == project.user) %>
+              <%= link_to 'Edit', edit_project_path(project), class: "btn btn-link" %>
+              <%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link" %>
+            <% end %>
           </div>
         </div>
       </div>
