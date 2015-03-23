@@ -1,5 +1,6 @@
 class DesignsController < ApplicationController
   before_action :set_design, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /designs
   # GET /designs.json
@@ -15,6 +16,7 @@ class DesignsController < ApplicationController
   # GET /designs/new
   def new
     @design = Design.new
+    @project = Project.find(params[:project_id])
   end
 
   # GET /designs/1/edit
@@ -25,10 +27,16 @@ class DesignsController < ApplicationController
   # POST /designs.json
   def create
     @design = Design.new(design_params)
+    @project = Project.find(params[:project_id])
+    @customer = @project.user
+    
+    @design.project_id = @project.id
+    @design.designer_id = current_user.id
+    @design.customer_id = @customer.id
 
     respond_to do |format|
       if @design.save
-        format.html { redirect_to @design, notice: 'Design was successfully created.' }
+        format.html { redirect_to project_designs_path(@design), notice: 'Design was successfully created.' }
         format.json { render :show, status: :created, location: @design }
       else
         format.html { render :new }
@@ -69,6 +77,6 @@ class DesignsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def design_params
-      params.require(:design).permit(:description, :image, :3partycontent, :project_id)
+      params.require(:design).permit(:description, :image, :thirdpartycontent, :project_id)
     end
 end

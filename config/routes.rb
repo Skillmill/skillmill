@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
-  resources :designs
 
   devise_for :users
-  resources :projects
+
+  resources :projects do
+    resources :designs
+  end
 
   get 'pages/about'
 

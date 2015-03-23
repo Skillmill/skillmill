@@ -1,24 +1,25 @@
-<p id="notice"><%= notice %></p>
+<div class="container-fluid">
+  <p>
+    <strong>Description:</strong>
+    <%= @design.description %>
+  </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @design.description %>
-</p>
+  <p>
+    <strong>Image:</strong>
+    <%= @design.image %>
+  </p>
 
-<p>
-  <strong>Image:</strong>
-  <%= @design.image %>
-</p>
+  <p>
+    <strong>3partycontent:</strong>
+    <%= @design.3partycontent %>
+  </p>
 
-<p>
-  <strong>3partycontent:</strong>
-  <%= @design.3partycontent %>
-</p>
+  <p>
+    <strong>Project:</strong>
+    <%= @design.project_id %>
+  </p>
 
-<p>
-  <strong>Project:</strong>
-  <%= @design.project_id %>
-</p>
-
-<%= link_to 'Edit', edit_design_path(@design) %> |
-<%= link_to 'Back', designs_path %>
+  <%= link_to 'Edit', edit_project_design_path(@design) %> |
+  <%= link_to 'Back', project_designs_path %>
+  
+</div>

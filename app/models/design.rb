@@ -1,4 +1,6 @@
 class Design < ActiveRecord::Base
+  mount_uploader :image, ImageUploader
+  
   validates :description, :image, :thirdpartycontent, presence: true
 
   belongs_to :project
