@@ -14,6 +14,10 @@ Rails.application.routes.draw do
 
   get 'myprojects' => "projects#customer"
 
+  get 'active-posts' => "designs#active_posts"
+
+  get 'submitted-designs' => "designs#submitted_designs"
+
   root 'pages#home'
 
   

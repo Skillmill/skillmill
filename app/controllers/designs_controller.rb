@@ -2,6 +2,16 @@ class DesignsController < ApplicationController
   before_action :set_design, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
 
+  # GET /ative_posts
+  def active_posts
+    @designs = Design.all.where(customer: current_user).order("created_at DESC")
+  end
+
+  # GET /submitted_designs
+  def submitted_designs
+    @designs = Design.all.where(designer: current_user).order("created_at DESC")
+  end
+
   # GET /designs
   # GET /designs.json
   def index
