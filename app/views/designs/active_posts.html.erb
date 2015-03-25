@@ -12,15 +12,15 @@
     </tr>
     <% @designs.each do |design| %>
       <tr>
-        <td style="vertical-align:middle"><%= link_to image_tag(design.image_url(:thumb)), project_design_path %></td>
+        <td style="vertical-align:middle"><%= link_to image_tag(design.image_url(:thumb)), project_design_path(design.project_id, design) %></td>
         <td style="vertical-align:middle"><%= design.description %></td>
-        <td style="vertical-align:middle"><%= design.project %></td>
+        <td style="vertical-align:middle"><%= design.project.title %></td>
         <td style="vertical-align:middle"><%= design.designer.name %></td>
         <td style="vertical-align:middle"><%= design.created_at %></td>
         <td style="vertical-align:middle">
           <!-- respond/reply to designer via message or email
           give feedback via writing and star rating -->
-          <%= link_to design, class: "project-action", method: :delete, data: { confirm: 'Are you sure?' } do %>
+          <%= link_to project_design_path(design.project_id, design), class: "project-action", method: :delete, data: { confirm: 'Are you sure?' } do %>
             <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
           <% end %>
         </td>

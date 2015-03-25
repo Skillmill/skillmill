@@ -4,11 +4,14 @@ class DesignsController < ApplicationController
 
   # GET /ative_posts
   def active_posts
+    # @project = Project.where(customer: current_user).find(params[:project_id])
+               # current_user.projects.find(.....)
     @designs = Design.all.where(customer: current_user).order("created_at DESC")
   end
 
   # GET /submitted_designs
   def submitted_designs
+    # @project = Project.where(customer: current_user).find(params[:project_id])
     @designs = Design.all.where(designer: current_user).order("created_at DESC")
   end
 
@@ -23,8 +26,7 @@ class DesignsController < ApplicationController
   # GET /designs/1
   # GET /designs/1.json
   def show
-  # binding.pry
-    
+    # binding.pry
   end
 
   # GET /designs/new
@@ -86,7 +88,9 @@ class DesignsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_design
-      @design = Design.find(params[:id])
+      @project = Project.find(params[:project_id])
+      @design = @project.designs.find(params[:id])
+      #@design = Design.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

@@ -13,9 +13,9 @@
     </tr>
     <% @designs.each do |design| %>
       <tr>
-        <td style="vertical-align:middle"><%= link_to image_tag(design.image_url(:thumb)), project_design_path %></td>
+        <td style="vertical-align:middle"><%= link_to image_tag(design.image_url(:thumb)), project_design_path(design.project_id, design) %></td>
         <td style="vertical-align:middle"><%= design.description %></td>
-        <td style="vertical-align:middle"><%= design.project %></td>
+        <td style="vertical-align:middle"><%= design.project.title %></td>
         <td style="vertical-align:middle"><%= design.customer.name %></td>
         <td style="vertical-align:middle"><%= design.created_at %></td>
         <td style="vertical-align:middle">
