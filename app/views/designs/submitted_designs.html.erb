@@ -13,7 +13,7 @@
     </tr>
     <% @designs.each do |design| %>
       <tr>
-        <td style="vertical-align:middle"><%= link_to image_tag(design.image_url(:thumb)), design %></td>
+        <td style="vertical-align:middle"><%= link_to image_tag(design.image_url(:thumb)), project_design_path %></td>
         <td style="vertical-align:middle"><%= design.description %></td>
         <td style="vertical-align:middle"><%= design.project %></td>
         <td style="vertical-align:middle"><%= design.customer.name %></td>
@@ -21,9 +21,6 @@
         <td style="vertical-align:middle">
           <!-- respond/reply to customer via message or email
           give customer feedback via writing and star rating -->
-          <%= link_to design, class: "project-action", method: :delete, data: { confirm: 'Are you sure?' } do %>
-            <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-          <% end %>
         </td>
       </tr>
     <% end %>

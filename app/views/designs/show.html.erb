@@ -1,25 +1,22 @@
+
 <div class="container-fluid">
-  <p>
-    <strong>Description:</strong>
-    <%= @design.description %>
-  </p>
+  <h1>Show Design</h1>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="thumbnail">
+        <%= image_tag @design.image_url %>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <p><%= @design.description %></p>
+      <p><%= @design.project_id %></p>
+    </div>
+  </div>
 
-  <p>
-    <strong>Image:</strong>
-    <%= @design.image %>
-  </p>
+  <% if current_user == @design.designer %>
+    <%= link_to 'Edit', edit_project_design_path(@design), class: "btn btn-link" %> |
+  <% end %>
 
-  <p>
-    <strong>3partycontent:</strong>
-    <%= @design.3partycontent %>
-  </p>
-
-  <p>
-    <strong>Project:</strong>
-    <%= @design.project_id %>
-  </p>
-
-  <%= link_to 'Edit', edit_project_design_path(@design) %> |
-  <%= link_to 'Back', project_designs_path %>
+  <%= link_to 'Browse Projects', projects_path, class: "btn btn-link" %>
   
 </div>

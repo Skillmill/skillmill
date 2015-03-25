@@ -12,7 +12,7 @@
     </tr>
     <% @designs.each do |design| %>
       <tr>
-        <td style="vertical-align:middle"><%= link_to image_tag(design.image_url(:thumb)), design %></td>
+        <td style="vertical-align:middle"><%= link_to image_tag(design.image_url(:thumb)), project_design_path %></td>
         <td style="vertical-align:middle"><%= design.description %></td>
         <td style="vertical-align:middle"><%= design.project %></td>
         <td style="vertical-align:middle"><%= design.designer.name %></td>

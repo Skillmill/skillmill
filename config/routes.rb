@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   resources :projects do
     resources :designs
   end
+  
+  root 'pages#home'
 
   get 'pages/about'
 
@@ -18,7 +20,6 @@ Rails.application.routes.draw do
 
   get 'submitted-designs' => "designs#submitted_designs"
 
-  root 'pages#home'
 
   
   # The priority is based upon order of creation: first created -> highest priority.

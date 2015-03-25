@@ -15,12 +15,16 @@ class DesignsController < ApplicationController
   # GET /designs
   # GET /designs.json
   def index
+    # binding.pry
     @designs = Design.all
+
   end
 
   # GET /designs/1
   # GET /designs/1.json
   def show
+  # binding.pry
+    
   end
 
   # GET /designs/new
@@ -46,7 +50,7 @@ class DesignsController < ApplicationController
 
     respond_to do |format|
       if @design.save
-        format.html { redirect_to project_designs_path(@design), notice: 'Design was successfully created.' }
+        format.html { redirect_to submitted_designs_path, notice: 'Design was successfully created.' }
         format.json { render :show, status: :created, location: @design }
       else
         format.html { render :new }
