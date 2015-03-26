@@ -66,7 +66,7 @@ class DesignsController < ApplicationController
   def update
     respond_to do |format|
       if @design.update(design_params)
-        format.html { redirect_to @design, notice: 'Design was successfully updated.' }
+        format.html { redirect_to submitted_designs_path, notice: 'Design was successfully updated.' }
         format.json { render :show, status: :ok, location: @design }
       else
         format.html { render :edit }
@@ -90,7 +90,6 @@ class DesignsController < ApplicationController
     def set_design
       @project = Project.find(params[:project_id])
       @design = @project.designs.find(params[:id])
-      #@design = Design.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

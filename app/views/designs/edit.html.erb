@@ -3,7 +3,7 @@
 
   <%= render 'form' %>
 
-  <%= link_to 'Show', @design %> |
-  <%= link_to 'Back', projects_designs_path %>
+  <%= link_to 'Show', project_design_path(@design.project_id, @design), class: "btn btn-link" %> |
+  <%= link_to 'Browse Projects', projects_path, class: "btn btn-link" %>
   
 </div>

@@ -7,8 +7,8 @@
       <th class="center">Description</th>
       <th class="center">Project</th>
       <th class="center">Customer</th>
-      <th class="center">Submitted_at</th>
-      <th class="center">Action</th>
+      <th class="center">Date</th>
+      <th class="center">Feedback</th>
       <!-- add feedback received, status, messages new/unread -->
     </tr>
     <% @designs.each do |design| %>
@@ -17,7 +17,7 @@
         <td style="vertical-align:middle"><%= design.description %></td>
         <td style="vertical-align:middle"><%= design.project.title %></td>
         <td style="vertical-align:middle"><%= design.customer.name %></td>
-        <td style="vertical-align:middle"><%= design.created_at %></td>
+        <td style="vertical-align:middle"><%= "submitted #{time_ago_in_words(design.created_at)} ago" %></td>
         <td style="vertical-align:middle">
           <!-- respond/reply to customer via message or email
           give customer feedback via writing and star rating -->
@@ -29,6 +29,6 @@
   <br>
 
   <% if user_signed_in? %>
-    <%= link_to 'New Project', new_project_path, class: "btn btn-link" %>
+    <%= link_to 'Browse Projects', projects_path, class: "btn btn-link" %>
   <% end %>
 </div>

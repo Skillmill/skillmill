@@ -8,8 +8,14 @@
       </div>
     </div>
     <div class="col-md-6">
+      <h4><%= @design.project.title %></h4>
       <p><%= @design.description %></p>
-      <p><%= @design.project_id %></p>
+      <p>Project Id: <%= @design.project_id %></p>
+      <p>Date Submitted: <%= @design.created_at.strftime("%F - %T") %></p>
+      <p>Designed by: <%= @design.designer.name %></p>
+      <p>Feedback received: </p>
+      <p>Project Status: </p>
+
     </div>
   </div>
 
