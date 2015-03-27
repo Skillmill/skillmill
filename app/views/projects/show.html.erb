@@ -17,12 +17,41 @@
 
   </div>
 
-  <% if current_user == @project.user %>
-    <%= link_to 'Edit', edit_project_path(@project), class: "btn btn-link" %> |
-  <% end %>
-
   <%= link_to 'Browse Projects', projects_path, class: "btn btn-link" %> |
 
   <%= link_to 'My Projects', myprojects_path, class: "btn btn-link" %>
   
+  <% if current_user == @project.user %>
+    | <%= link_to 'Edit', edit_project_path(@project), class: "btn btn-link" %> 
+    
+    <div class="container-fluid">
+      <h3>Designs Submitted</h3>
+  
+      <table class="table table-striped table-bordered">
+        <tr>
+          <th class="center">Image</th>
+          <th class="center">Description</th>
+          <th class="center">Action</th>
+        </tr>
+        <% @project.designs.each do |design| %>
+          <tr>
+            <td style="vertical-align:middle"><%= link_to image_tag(design.image_url(:thumb)), project_design_path(@project, design) %></td>
+            <td style="vertical-align:middle"><%= design.description %></td>
+            <td style="vertical-align:middle" class="center" >
+              <%= link_to '#', class: "project-action" do %>
+                <span class="glyphicon glyphicon-send" aria-hidden="true"></span>
+              <% end %>
+              <%= link_to '#', class: "project-action" do %>
+                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              <% end %>
+              <%= link_to '#', class: "project-action" do %>
+                <span class="glyphicon glyphicon-ban-circle" aria-hidden="true"></span>
+              <% end %>
+            </td>
+          </tr>
+        <% end %>
+      </table>
+    </div>
+  <% end %>
+
 </div>
