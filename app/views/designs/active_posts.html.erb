@@ -20,7 +20,7 @@
         <td style="vertical-align:middle">
           <!-- respond/reply to designer via message or email
           give feedback via writing and star rating -->
-          <%= link_to project_design_path(design.project_id, design), class: "project-action", method: :delete, data: { confirm: 'Are you sure?' } do %>
+          <%= link_to project_design_path(design.project_id, design), class: "action", method: :delete, data: { confirm: 'Are you sure?' } do %>
             <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
           <% end %>
         </td>
