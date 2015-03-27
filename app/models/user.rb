@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
   validates :name, presence: true
 
   has_many :projects, dependent: :destroy
+  has_many :reviews, dependent: :destroy
   has_many :active_posts, class_name: "Design", foreign_key: "customer_id"
   has_many :submitted_designs, class_name: "Design", foreign_key: "designer_id"
 end
