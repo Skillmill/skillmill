@@ -1,5 +1,5 @@
 
-  <%= form_for([@project, @design], :html => { multipart: true }) do |f| %>
+  <%= form_for(@design, :html => { multipart: true }) do |f| %>
     <% if @design.errors.any? %>
       <div id="error_explanation" class="alert alert-danger alert-dismissable">
         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>

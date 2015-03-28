@@ -1,12 +1,22 @@
 Rails.application.routes.draw do
 
-  resources :reviews, except: [:show, :index]
 
   devise_for :users
 
+  # Deep Nesting to be avoided!!
+  # resources :projects do
+  #   resources :designs
+  #    resources :reviews, except: [:show, :index]
+  # end
+
+  # Shallow nesting of resources: 
   resources :projects do
-    resources :designs
+    resources :designs, only: [:index, :new, :create]
   end
+  resources :designs, only: [:show, :edit, :update, :destroy] do
+    resources :reviews, only: [:new, :create]
+  end
+  resources :reviews, only: [:edit, :update, :destroy]
   
   root 'pages#home'
 

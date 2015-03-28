@@ -21,7 +21,7 @@
   </div>
 
   <% if current_user == @design.designer %>
-    <%= link_to 'Edit', edit_project_design_path(@project, @design), class: "btn btn-link" %> |
+    <%= link_to 'Edit', edit_design_path(@design), class: "btn btn-link" %> |
   <% end %>
 
   <%= link_to 'Browse Projects', projects_path, class: "btn btn-link" %>
