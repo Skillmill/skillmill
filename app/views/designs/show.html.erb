@@ -13,8 +13,7 @@
       <p>Designed by: <%= @design.designer.name %></p>
       <p>Feedback received: </p>
       <p>Project Status: </p>
-      <%= link_to 'Comment', '#', class: "btn btn-primary btn-xs" %>
-      <%= link_to 'Rate', '#', class: "btn btn-primary btn-xs" %>
+      <%= link_to 'Rate', new_design_review_path(@design), class: "btn btn-primary btn-xs" %>
       <%= link_to 'Contact', '#', class: "btn btn-primary btn-xs" %>
       <%= link_to 'Block', '#', class: "btn btn-danger btn-xs" %>
     </div>
