@@ -6,4 +6,6 @@ class Design < ActiveRecord::Base
   belongs_to :project
   belongs_to :designer, class_name: "User"
   belongs_to :customer, class_name: "User"
+
+  has_many :reviews
 end

@@ -28,6 +28,7 @@ class DesignsController < ApplicationController
   # GET /designs/1.json
   def show
     # binding.pry
+    @reviews = Review.where(design_id: @design.id)
   end
 
   # GET /designs/new
