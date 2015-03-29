@@ -11,8 +11,8 @@
       <p><%= @design.description %></p>
       <p>Date Submitted: <%= @design.created_at.strftime("%F - %T") %></p>
       <p>Designed by: <%= @design.designer.name %></p>
-      <p>Feedback received: </p>
-      <p>Project Status: </p>
+      <div class="star-rating" data-score= <%= @avg_rating %> ></div>
+      <p><%= "#{@reviews.length} reviews" %></p>
       <%= link_to 'Rate', new_design_review_path(@design), class: "btn btn-primary btn-xs" %>
       <%= link_to 'Contact', '#', class: "btn btn-primary btn-xs" %>
       <%= link_to 'Block', '#', class: "btn btn-danger btn-xs" %>
@@ -23,10 +23,21 @@
       <% if @reviews.blank? %>
         <h4>No reviews yet</h4>
       <% else %>
-        <% @reviews.each do |review| %>
-          <div class="star-rating" data-score= <%= review.rating %> ></div>
-          <p><%= review.comment %></p>
-        <% end %>
+        <table class="table">
+          <tbody>
+            <% @reviews.each do |review| %>
+              <tr>
+                <td>
+                  <div class="star-rating" data-score= <%= review.rating %> ></div>
+                  <br>
+                  <p><%= h(review.comment).gsub(/\n/, '<br/>').html_safe %></p>
+                  <p><%= "posted #{time_ago_in_words(review.created_at)} ago" %></p>
+                  <p><%= "by #{review.user.name}." %></p>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
       <% end %>
     </div>
   </div>
