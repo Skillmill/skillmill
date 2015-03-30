@@ -4,10 +4,9 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  validates :first_name, presence: true
-  validates :last_name, presence: true
-  validates :email, presence: true
-
+  validates :first_name, :last_name, :email, presence: true
+  validates_format_of :email, :with => /@/
+  
   has_many :projects, dependent: :destroy
   has_many :reviews, dependent: :destroy
   has_many :active_posts, class_name: "Design", foreign_key: "customer_id"
