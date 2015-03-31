@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
 
+  resources :categories
+
   devise_for :users
 
   # Deep Nesting to be avoided!!
