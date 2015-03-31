@@ -19,15 +19,12 @@ class DesignsController < ApplicationController
   # GET /designs
   # GET /designs.json
   def index
-    # binding.pry
     @designs = Design.all
-
   end
 
   # GET /designs/1
   # GET /designs/1.json
   def show
-    # binding.pry
     @reviews = Review.where(design_id: @design.id).order("created_at DESC")
     if @reviews.blank?
       @avg_rating = 0

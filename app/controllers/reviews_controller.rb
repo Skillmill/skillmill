@@ -1,7 +1,8 @@
 class ReviewsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_review, only: [:show, :edit, :update, :destroy]
   before_action :set_design
+  before_action :set_review, only: [:edit, :update, :destroy]
+  before_action :check_user, only: [:edit, :update, :destroy]
 
   
   # GET /reviews/new
@@ -17,7 +18,9 @@ class ReviewsController < ApplicationController
   # POST /reviews.json
   def create
     @review = Review.new(review_params)
-    @review.user_id = current_user.id
+    # binding.pry
+    # @review.user_id = current_user.id
+    @review.user = current_user
     @review.design_id = @design.id
 
     respond_to do |format|
@@ -50,19 +53,31 @@ class ReviewsController < ApplicationController
   def destroy
     @review.destroy
     respond_to do |format|
-      format.html { redirect_to reviews_url, notice: 'Review was successfully destroyed.' }
+      format.html { redirect_to design_path(@design), notice: 'Review was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_review
-      @review = Review.find(params[:id])
+    def set_design
+      binding.pry
+      @design = Design.find(params[:design_id])
+      # @design = Design.find(params[:id])
     end
 
-    def set_design
-      @design = Design.find(params[:design_id])
+    def set_review
+      # binding.pry
+      # this is creating an array!!!
+      @review = Review.where(design_id: @design.id)
+    end
+
+
+    def check_user
+      # binding.pry
+      unless (@review.user == current_user) || (current_user.admin?)
+        redirect_to root_url, alert: "Sorry, this review belongs to someone else"
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
