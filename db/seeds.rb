@@ -6,9 +6,10 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-# Role.create([
-#   {name: 'designer'},
-#   {name: 'customer'},
-#   {name: 'admin'}
-# ])
-  
+# main_categories = ["Architecture", "Graphic Design", "Web Design", "Audio & Music", "Film & Video", "Photography", "Writing", "Software Development", "Other"]
+
+# main_categories.each do |category|
+#   Category.create(name: category)
+# end
+
+

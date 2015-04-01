@@ -1,6 +1,6 @@
 class DesignsController < ApplicationController
   before_action :set_design, only: [:show, :edit, :update, :destroy]
-  before_action :set_project
+  # before_action :set_project
   before_action :authenticate_user!
 
   # GET /ative_posts
@@ -25,6 +25,7 @@ class DesignsController < ApplicationController
   # GET /designs/1
   # GET /designs/1.json
   def show
+    @project = @design.project_id
     @reviews = Review.where(design_id: @design.id).order("created_at DESC")
     if @reviews.blank?
       @avg_rating = 0
@@ -91,15 +92,18 @@ class DesignsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
+    
     def set_design
       # @design = @project.designs.find(params[:id])
       @design = Design.find(params[:id])
     end
 
-    def set_project
-      # @project = Project.find(params[:project_id])
-      @project = @design.project_id
-    end
+    # def set_project
+    #   # binding.pry
+    #   # @project = Project.find(params[:project_id])
+    #   @project = @design.project_id
+    # end
+
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def design_params
