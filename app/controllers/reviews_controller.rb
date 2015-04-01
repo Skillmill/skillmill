@@ -1,6 +1,6 @@
 class ReviewsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_design
+  before_action :set_design, except: [:edit]
   before_action :set_review, only: [:edit, :update, :destroy]
   before_action :check_user, only: [:edit, :update, :destroy]
 
@@ -12,6 +12,10 @@ class ReviewsController < ApplicationController
 
   # GET /reviews/1/edit
   def edit
+    # binding.pry
+    # @design = Design.find(params[:id])
+    # @review = Review.where(design_id: @design.id)
+    # @review = Review.find(design_id: @design.id)
   end
 
   # POST /reviews
@@ -61,20 +65,22 @@ class ReviewsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_design
-      binding.pry
+      # binding.pry
       @design = Design.find(params[:design_id])
       # @design = Design.find(params[:id])
     end
 
     def set_review
+      @design = Design.find(params[:id])
       # binding.pry
-      # this is creating an array!!!
-      @review = Review.where(design_id: @design.id)
+      # this is creating an array!!! How do I access the review I am trying to edit or delete. 
+      @reviews = Review.where(design_id: @design.id)
     end
 
 
     def check_user
       # binding.pry
+      # Same issue here: How do I access the user of the selected review?
       unless (@review.user == current_user) || (current_user.admin?)
         redirect_to root_url, alert: "Sorry, this review belongs to someone else"
       end

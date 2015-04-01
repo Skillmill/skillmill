@@ -12,6 +12,7 @@ class DesignsController < ApplicationController
 
   # GET /submitted_designs
   def submitted_designs
+    # binding.pry
     # @project = Project.where(customer: current_user).find(params[:project_id])
     @designs = Design.all.where(designer: current_user).order("created_at DESC")
   end

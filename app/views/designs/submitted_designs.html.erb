@@ -13,10 +13,10 @@
     </tr>
     <% @designs.each do |design| %>
       <tr>
-        <td style="vertical-align:middle"><%= link_to image_tag(design.image_url(:thumb)), project_design_path(design.project_id, design) %></td>
+        <td style="vertical-align:middle"><%= link_to image_tag(design.image_url(:thumb)), design_path(design) %></td>
         <td style="vertical-align:middle"><%= design.description %></td>
         <td style="vertical-align:middle"><%= design.project.title %></td>
-        <td style="vertical-align:middle"><%= design.customer.name %></td>
+        <td style="vertical-align:middle"><%= "#{design.customer.first_name.capitalize} #{design.customer.last_name.capitalize[0]}." %></td>
         <td style="vertical-align:middle"><%= "submitted #{time_ago_in_words(design.created_at)} ago" %></td>
         <td style="vertical-align:middle">
           <!-- respond/reply to customer via message or email
