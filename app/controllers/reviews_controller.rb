@@ -1,7 +1,8 @@
 class ReviewsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_design, except: [:edit]
   before_action :set_review, only: [:edit, :update, :destroy]
+  #before_action :set_design, except: [:edit]
+  #before_action :set_review, only: [:edit, :update, :destroy]
   before_action :check_user, only: [:edit, :update, :destroy]
 
   
@@ -22,6 +23,7 @@ class ReviewsController < ApplicationController
   # POST /reviews.json
   def create
     @review = Review.new(review_params)
+    @design = Design.find(params[:design_id])
     # binding.pry
     # @review.user_id = current_user.id
     @review.user = current_user
@@ -43,7 +45,7 @@ class ReviewsController < ApplicationController
   def update
     respond_to do |format|
       if @review.update(review_params)
-        format.html { redirect_to design_path(@design), notice: 'Review was successfully updated.' }
+        format.html { redirect_to design_path(@review.design), notice: 'Review was successfully updated.' }
         format.json { render :show, status: :ok, location: @review }
       else
         format.html { render :edit }
@@ -57,7 +59,7 @@ class ReviewsController < ApplicationController
   def destroy
     @review.destroy
     respond_to do |format|
-      format.html { redirect_to design_path(@design), notice: 'Review was successfully destroyed.' }
+      format.html { redirect_to design_path(@review.design), notice: 'Review was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -71,10 +73,11 @@ class ReviewsController < ApplicationController
     end
 
     def set_review
-      @design = Design.find(params[:id])
+      
       # binding.pry
       # this is creating an array!!! How do I access the review I am trying to edit or delete. 
-      @reviews = Review.where(design_id: @design.id)
+      @review = current_user.reviews.find(params[:id])
+      #@design = @review.design
     end
 
 

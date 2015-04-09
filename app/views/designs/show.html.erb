@@ -48,8 +48,8 @@
 
                   <% if user_signed_in? %>
                     <% if current_user == review.user %>
-                      <%= link_to 'Edit', edit_review_path(@design, review), class: "btn btn-primary btn-xs" %>
-                      <%= link_to 'Delete', review_path(@design, review), class: "btn btn-danger btn-xs", method: :delete %>
+                      <%= link_to 'Edit', edit_review_path(review), class: "btn btn-primary btn-xs" %>
+                      <%= link_to 'Delete', review_path(review), class: "btn btn-danger btn-xs", method: :delete %>
                     <% end %>
                   <% end %>
                   

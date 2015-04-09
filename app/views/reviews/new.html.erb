@@ -1,7 +1,9 @@
 <div class="container-fluid">
   <h1>New Review</h1>
 
-  <%= render 'form' %>
+  <%= form_for(@review, url: design_reviews_path(params[:design_id])) do |f| %>
+    <%= render partial: 'form', locals: {f: f} %>
+  <% end %>
 
   <%= link_to 'Back', '#' %>
 </div>
