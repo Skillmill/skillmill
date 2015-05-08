@@ -14,7 +14,7 @@ html {
 body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
-  padding-top: 101px; 
+  // padding-top: 101px; 
 }
 
 .footer {
@@ -41,6 +41,14 @@ body {
   padding-bottom: 95px;
 }
 
+#categories-menu {
+  // top: 50px;
+  z-index: 1029;
+  .navbar-nav>li {
+    float: none;
+  }
+}
+
 .alert-custom {
   margin-bottom: 0px;
   border-radius: 0px;
@@ -58,11 +66,12 @@ table {
   clear: left;
 }
 
-/* CUSTOMIZE THE NAVBAR
+/* NAVBAR
 -------------------------------------------------- */
 
 .navbar {
   margin-bottom: 0px;
+  border-radius: 0px;
   #menu-right {
     margin-right: 0px;
   }
@@ -70,16 +79,41 @@ table {
     margin-left: 6em;
   }
 }
-#navbar-menu {
-  top: 50px;
-  z-index: 1029;
-  .navbar-nav>li {
-    float: none;
+
+/* MAIN SEARCH WINDOW
+-------------------------------------------------- */
+#main-search-field {
+  text-align: center;
+  text-transform: uppercase;
+  .input-group {
+    width: 50%;
+    .input-group-btn {
+      width: 40px;
+    }
   }
 }
 
+#how-it-works-btn {
+  text-align: center;
+}
 
-/* CUSTOMIZE THE CAROUSEL
+/* CATEGORIES
+-------------------------------------------------- */
+#categories-menu {
+  padding: 30px 15px;
+
+  .category-menu {
+    margin: 0 auto;
+    div {
+      text-align: center;
+    }
+  }
+  .category-btn {
+    text-align: center;
+  }
+}
+
+/* CAROUSEL
 -------------------------------------------------- */
 
 .carousel-inner {

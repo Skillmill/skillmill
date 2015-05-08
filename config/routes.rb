@@ -24,6 +24,8 @@ Rails.application.routes.draw do
 
   get 'pages/FAQ'
 
+  get 'pages/how_it_works'
+
   get 'myprojects' => "projects#customer"
 
   get 'active-posts' => "designs#active_posts"

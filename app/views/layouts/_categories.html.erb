@@ -1,0 +1,25 @@
+<div id="categories-menu">
+  <div class="container-fluid">
+    <div class="row category-menu section-header">
+      <div><span class="glyphicon glyphicon-list-alt"></span></div>
+      <div>
+        <h3>Our Categories</h3>
+      </div>
+    </div>
+    <div class="row category-menu">
+      <% @categories_1.each do |category| %>
+        <div class="col-md-3"><%= category.name %></div>
+      <% end %>
+    </div>
+    <div class="row category-menu">
+      <% @categories_2.each do |category| %>
+        <div class="col-md-3"><%= category.name %></div>
+      <% end %>
+    </div>
+    <div class="row category-btn">
+      <button class="btn btn-warning" type="submit"><%= @category_3 %></button>
+    </div>
+  </div>
+</div>
+
+      
