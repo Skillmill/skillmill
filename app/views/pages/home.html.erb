@@ -2,7 +2,7 @@
 <div class="jumbotron" id="main-header">
   <div class="container-fluid">
 
-    <div id="main-search-field">
+    <div class="center" id="main-search-field">
       <h1>Find Projects and Creatives</h1>
       <form class="navbar-form" role="search">
         <div class="input-group">
@@ -14,7 +14,7 @@
       </form>
     </div>
     
-    <div class="row" id="how-it-works-btn">
+    <div class="row center section-btn" id="how-it-works-btn">
       <button class="btn btn-warning" type="submit">How it works</button>
     </div>
   </div>
@@ -25,11 +25,15 @@
 <!-- Featured Projects -->
 <div class="jumbotron" id="portfolio">
   <div class="container-fluid">
-    <h1>Featured Projects</h1>
-    <p>Chillwave pork belly yr meggings four dollar toast mustache, pop-up heirloom migas cardigan synth church-key. Asymmetrical vinyl Banksy fap hoodie meggings bespoke drinking vinegar XOXO, fanny pack swag pickled. Occupy ennui small batch, lumbersexual sriracha listicle next level chillwave sartorial cray four loko Intelligentsia tote bag raw denim fingerstache. </p>
-    <p>
-      <%= link_to "Browse Projects", projects_path, class: "btn btn-primary btn-lg" %>
-    </p>
+    <div class="row section-header center">
+      <div>
+        <span class="glyphicon glyphicon-list-alt"></span>
+        <h3>Our Projects</h3>
+      </div>
+    </div>
+    <div class="row center section-btn" id="see-all-btn">
+      <%= link_to "See All", projects_path, class: "btn btn-primary" %>
+    </div>
   </div>
 </div>
 
@@ -38,9 +42,15 @@
 <!-- Featured Designers -->
 <div class="jumbotron" id="designers">
   <div class="container-fluid">
-    <h1>Featured Designers</h1>
-    <p>Cold-pressed normcore lomo you probably haven't heard of them meh art party. Roof party Vice selfies drinking vinegar tote bag. Gentrify fashion axe Marfa deep v, leggings Intelligentsia cred Truffaut bitters brunch scenester four loko. Pour-over asymmetrical church-key squid. </p>
-    <p><a href="" class="btn btn-primary btn-lg">Browse Designers</a></p>
+    <div class="row section-header center">
+      <div>
+        <span class="glyphicon glyphicon-list-alt"></span>
+        <h3>Our Designers</h3>
+      </div>
+    </div>
+    <div class="row center section-btn" id="see-all-btn">
+      <%= link_to "See All", projects_path, class: "btn btn-primary" %>
+    </div>
   </div>
 </div>
 

@@ -1,22 +1,37 @@
 <div id="categories-menu">
   <div class="container-fluid">
-    <div class="row category-menu section-header">
-      <div><span class="glyphicon glyphicon-list-alt"></span></div>
+    <div class="row section-header center">
       <div>
+        <span class="glyphicon glyphicon-list-alt"></span>
         <h3>Our Categories</h3>
       </div>
     </div>
-    <div class="row category-menu">
+
+    <div class="row category-menu center">
       <% @categories_1.each do |category| %>
-        <div class="col-md-3"><%= category.name %></div>
+        <div class="col-md-3">
+          <div>
+            <span class="glyphicon glyphicon-list-alt"></span>
+          </div>
+          <div>
+            <%= category.name %>
+          </div>
+        </div>
       <% end %>
     </div>
-    <div class="row category-menu">
+    <div class="row category-menu center">
       <% @categories_2.each do |category| %>
-        <div class="col-md-3"><%= category.name %></div>
+        <div class="col-md-3">
+          <div class="category-icon">
+            <span class="glyphicon glyphicon-list-alt"></span>
+          </div>
+          <div class="category-name">
+            <%= category.name %>
+          </div>
+        </div>
       <% end %>
     </div>
-    <div class="row category-btn">
+    <div class="row section-btn center">
       <button class="btn btn-warning" type="submit"><%= @category_3 %></button>
     </div>
   </div>

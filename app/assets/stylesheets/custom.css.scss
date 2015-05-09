@@ -14,6 +14,7 @@ html {
 body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
+  font-family: Maven Pro;
   // padding-top: 101px; 
 }
 
@@ -41,12 +42,22 @@ body {
   padding-bottom: 95px;
 }
 
-#categories-menu {
-  // top: 50px;
-  z-index: 1029;
-  .navbar-nav>li {
-    float: none;
+.section-header {
+  
+  font-weight: bold;
+  h3 {
+    font-size: 20px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
   }
+  span {
+    font-size: 20px;
+  }
+}
+
+.section-btn {
+  margin-top: 30px;
 }
 
 .alert-custom {
@@ -83,7 +94,6 @@ table {
 /* MAIN SEARCH WINDOW
 -------------------------------------------------- */
 #main-search-field {
-  text-align: center;
   text-transform: uppercase;
   .input-group {
     width: 50%;
@@ -94,7 +104,7 @@ table {
 }
 
 #how-it-works-btn {
-  text-align: center;
+
 }
 
 /* CATEGORIES
@@ -103,13 +113,19 @@ table {
   padding: 30px 15px;
 
   .category-menu {
-    margin: 0 auto;
+    margin: 30px auto;
     div {
-      text-align: center;
+      text-transform: uppercase;
+      font-size: 14px;
+      color: #7E7965;
+      letter-spacing: 1.5px;
     }
-  }
-  .category-btn {
-    text-align: center;
+    .category-icon {
+      padding-bottom: 5px;
+    }
+    .category-name {
+
+    }
   }
 }
 
