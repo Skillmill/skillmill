@@ -1,3 +1,14 @@
-//when you click the why button, if div is hidden make hidden div 'benefits' visible and slide down else show div
 
-//when x close button is clicked make the div button slide up and hide
+$(document).ready(function() {
+
+  $("#why-btn").on('click', function(e) {
+    e.preventDefault();
+    $("#benefits").slideDown(200);
+  });
+
+  $("#close-benefits-btn").on('click', function(e) {
+    e.preventDefault();
+    $("#benefits").slideUp(200);
+  });
+
+});

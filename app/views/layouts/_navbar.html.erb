@@ -34,7 +34,7 @@
         <% else %>
           <li><%= link_to "Log in", new_user_session_path %></li>
           <li><%= button_to "Create Account", new_user_registration_path, class: "btn btn-success navbar-btn", method: :get %></li>
-          <li><%= link_to "Why?" %></li>
+          <li id="why-btn"><%= link_to "Why?" %></li>
         <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->
