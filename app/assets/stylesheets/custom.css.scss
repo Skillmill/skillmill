@@ -95,6 +95,9 @@ table {
 -------------------------------------------------- */
 #main-search-field {
   text-transform: uppercase;
+  h1 {
+    font-weight: bold;
+  }
   .input-group {
     width: 50%;
     .input-group-btn {
@@ -156,6 +159,11 @@ table {
   }
 }
 
+/* EVENTS
+-------------------------------------------------- */
+#events {
+  background-color: #fefefe;
+}
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
