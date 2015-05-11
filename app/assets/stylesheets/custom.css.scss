@@ -23,14 +23,11 @@ body {
 }
 
 .jumbotron {
-  // color: #fefefe;
   margin-bottom: 0px;
-  padding-top: 95px;
-  padding-bottom: 95px;
 }
 
 .section-header {
-  
+  margin-bottom: 40px;
   font-weight: bold;
   h3 {
     font-size: 20px;
@@ -80,6 +77,12 @@ table {
 
 /* MAIN SEARCH WINDOW
 -------------------------------------------------- */
+#main-header {
+  margin-bottom: 0px;
+  padding-top: 95px;
+  padding-bottom: 95px;
+}
+
 #main-search-field {
   text-transform: uppercase;
   h1 {
@@ -100,8 +103,9 @@ table {
 /* CATEGORIES
 -------------------------------------------------- */
 #categories-menu {
-  padding: 30px 15px;
-
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: #fff;
   .category-menu {
     margin: 30px auto;
     div {
