@@ -64,29 +64,86 @@ table {
 /* NAVBAR
 -------------------------------------------------- */
 
-.navbar {
-  margin-bottom: 0px;
-  border-radius: 0px;
-  #menu-right {
-    margin-right: 0px;
-  }
-  #menu-left {
-    margin-left: 6em;
-  }
-}
+
 
 /* MAIN SEARCH WINDOW
 -------------------------------------------------- */
 #main-header {
   margin-bottom: 0px;
-  padding-top: 95px;
+  padding-top: 20px;
   padding-bottom: 95px;
+  background-image: url('background_coffeebreak.jpg');
+  background-repeat: no-repeat;
+  background-position: left top;
+  height: 550px;
+  .navbar {
+    margin-bottom: 0px;
+    border-radius: 0px;
+    background-color : transparent;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    li {
+      padding: 0px 10px;
+    }
+    a {
+      color: #fff;
+      padding: 3px 0px 0px;
+    }
+    .navbar-header {
+      img {
+        height: 30px;
+      }
+    }
+    .navbar-nav {
+      margin-top: 6px;
+    }
+    
+    #menu-right {
+      input {
+        margin-right: 0px;
+        margin-top: -3px;
+        border-radius: 20px;
+        background-color: transparent;
+        border-color: #fff;
+      }
+      input:hover {
+        background-color: #fff;
+        color: #000;
+      }
+      a:hover {
+        background-color: transparent;
+        color: #FFDC08;
+        // font-weight: bold;
+
+      }
+    }
+    #menu-left {
+      margin-left: 4em;
+      
+      a:hover {
+        background-color: transparent;
+        border-bottom: 3px solid #FFDC08;
+      }
+    }
+  }
 }
 
 #main-search-field {
   text-transform: uppercase;
+  position: relative;
+  top: 50%;
+  transform: translateY(80%);
   h1 {
+    font-size: 50px;
     font-weight: bold;
+    color: #fff;
+    letter-spacing: 2px;
+    #projects {
+      color: #FFDC08;
+    }
+    #creatives {
+      color: #249CB1;
+    }
   }
   .input-group {
     width: 50%;

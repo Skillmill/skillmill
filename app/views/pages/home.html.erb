@@ -1,9 +1,9 @@
 <!-- Main Search Window -->
 <div class="jumbotron" id="main-header">
   <div class="container-fluid">
-
+    <%= render 'layouts/navbar' %>
     <div class="center" id="main-search-field">
-      <h1>Find Projects and Creatives</h1>
+      <h1>Find <span id="projects">Projects</span> and <span id="creatives">Creatives</span></h1>
       <form class="navbar-form" role="search">
         <div class="input-group">
           <input type="text" class="form-control" placeholder="Search">
@@ -12,11 +12,11 @@
           </div>
         </div>
       </form>
+      <div class="row center section-btn" id="how-it-works-btn">
+        <button class="btn btn-warning" type="submit">How it works</button>
+      </div>
     </div>
     
-    <div class="row center section-btn" id="how-it-works-btn">
-      <button class="btn btn-warning" type="submit">How it works</button>
-    </div>
   </div>
 </div>
 

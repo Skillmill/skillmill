@@ -5,12 +5,11 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <%= favicon_link_tag 'favicon.ico' %>
+  <%= favicon_link_tag 'favicon_skillmill.ico' %>
 </head>
 <body>
   <%= render 'layouts/facebook' %>
   <%= render 'layouts/benefits' %>
-  <%= render 'layouts/navbar' %>
   
     <% flash.each do |name, msg| %>
       <% if msg.is_a?(String) %>
