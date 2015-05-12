@@ -79,4 +79,8 @@ Rails.application.configure do
 
   # Required for gem Devise. REMEMBER to change localhost:3000 to actual application host
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  # test to see if that will show background image in heroku
+  config.serve_static_assets = true
+  config.assets.compile = true
 end
