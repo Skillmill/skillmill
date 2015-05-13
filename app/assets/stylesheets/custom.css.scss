@@ -44,6 +44,22 @@ body {
 
 .section-btn {
   margin-top: 30px;
+  button {
+    background-color: transparent;
+    padding: 0px 0px 1px;
+    border: none;
+    border-bottom: 5px solid #FFDC08;
+    border-radius: 0px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #249CB1;
+  }
+  button:hover {
+    background-color: transparent;
+    border-bottom: 5px solid #249CB1;
+    color: #FFDC08;
+  }
 }
 
 .alert-custom {
@@ -74,7 +90,7 @@ table {
   margin-bottom: 0px;
   padding-top: 20px;
   padding-bottom: 95px;
-  background-image: url('background_coffeebreak.jpg');
+  background-image: url('background_coffeebreak_yellow.jpg');
   background-repeat: no-repeat;
   background-position: left top;
   height: 550px;
@@ -156,7 +172,20 @@ table {
 }
 
 #how-it-works-btn {
-
+  margin-top: 30px;
+  button {
+    background-color: hsla(189,80,69,0.2);
+    padding: 5px;
+    border: 2px solid #249CB1;
+    border-radius: 0px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #FFDC08;
+  }
+  button:hover {
+    background-color: #249CB1;
+  }
 }
 
 /* CATEGORIES
@@ -167,16 +196,19 @@ table {
   background-color: #fff;
   .category-menu {
     margin: 30px auto;
-    div {
+    .category-icon {
+      padding-bottom: 15px;
+      font-size: 30px;
+      color: #FFDC08;
+    }
+    .category-name {
       text-transform: uppercase;
       font-size: 14px;
       color: #7E7965;
       letter-spacing: 1.5px;
+      font-weight: bold;
     }
-    .category-icon {
-      padding-bottom: 5px;
-    }
-    .category-name {
+    button:hover {
 
     }
   }
