@@ -26,6 +26,33 @@ body {
   margin-bottom: 0px;
 }
 
+.thumbnail {
+  padding: 0px;
+  h3 {
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  p {
+    font-size: 14px;
+  } 
+  .btn {
+    background-color: transparent;
+    color: #249CB1;
+    padding: 5px;
+    border: 2px solid #249CB1;
+    border-radius: 0px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+  }
+  .btn:hover {
+    background-color: #249CB1;
+    color: #FFDC08;
+
+  }
+}
+
 .section-header {
   margin-bottom: 40px;
   h3 {
@@ -214,6 +241,10 @@ table {
   }
 }
 
+/* PROJECTS
+-------------------------------------------------- */
+
+
 /* CAROUSEL
 -------------------------------------------------- */
 
@@ -223,6 +254,9 @@ table {
     width: 100%;
   }
 }
+
+/* DESIGNERS
+-------------------------------------------------- */
 
 
 /* SERVICES CONTENT
