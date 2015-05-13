@@ -82,6 +82,6 @@ Rails.application.configure do
 
   # Required as background image will not show on Heroku
   # source: http://stackoverflow.com/questions/21974190/background-image-not-showing-up-in-heroku
-  config.serve_static_assets = true
+  config.serve_static_files = true
   config.assets.compile = true
 end
