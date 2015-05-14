@@ -246,17 +246,19 @@ table {
 #how-it-works-btn {
   margin-top: 30px;
   button {
-    background-color: hsla(189,80,69,0.4);
+    background-color: #FFDC08;
+    // background-color: #ffc708;
     padding: 6px 15px;
-    border: 1px solid #249CB1;
+    border: none;
     border-radius: 0px;
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 2px;
-    color: #FFDC08;
+    color: #fff;
   }
   button:hover {
     background-color: #249CB1;
+    color: #FFDC08;
   }
 }
 
@@ -338,6 +340,20 @@ table {
 -------------------------------------------------- */
 #events {
   background-color: #fefefe;
+  #events-title {
+    margin-bottom: 5px;
+  }
+  .lead {
+    text-transform: uppercase;
+    color: #249CB1;
+    font-weight: bold;
+  }
+  .sub-lead {
+    font-size: 16px;
+  }
+  .info {
+    font-size: 18px;
+  }
 }
 
 /* FOOTER
