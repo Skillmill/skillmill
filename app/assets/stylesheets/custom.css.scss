@@ -235,9 +235,6 @@ table {
       letter-spacing: 1.5px;
       font-weight: bold;
     }
-    button:hover {
-
-    }
   }
 }
 
@@ -250,9 +247,27 @@ table {
 
 .carousel-inner {
   height:100%;
-  .item img {
-    width: 100%;
+  background-color: #249CB1;
+  .item {
+    img {
+      width: 100%;
+      visibility: hidden;
+    }
+    .carousel-caption {
+      padding-bottom: 70px;
+      .lead {
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+      }
+      p {
+        font-size: 20px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin: 0px;
+      }
+    }
   }
+
 }
 
 /* DESIGNERS
@@ -293,22 +308,36 @@ table {
   height: 300px;
   background-color: #249CB1;
   color: #fff;
-  .btn {
-    color: #fff;
+  .footer-title {
+    margin: 30px 0px 0px;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 2px;
+  }
+  .footer-links {
+    .btn {
+      color: #fff;
+    }
+  }
+  .company-info-links {
+    margin-left: 115px;
+  }
+  .resources-links {
+    margin-left: 132px;
+  }
+  .social-links {
+    // margin-left: 30px;
   }
   .social-media {
-    float: right;
     margin-top: 8px;
   }
   .container-fluid {
     height: auto;
     position: relative;  
     bottom: 0px;
-
-
   }
   #copyright {
-    bottom: 0px;
+    bottom: -100px;
     position: relative;
   }
 }
