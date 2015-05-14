@@ -24,6 +24,7 @@ body {
 
 .jumbotron {
   margin-bottom: 0px;
+  background-color: #f7f7f7;
 }
 
 .thumbnail {
@@ -104,6 +105,38 @@ table {
 .col-md-3:nth-child(4n+1) {
   /* ensures that thumbnails arrange in fours */
   clear: left;
+}
+
+/* BENEFITS
+-------------------------------------------------- */
+
+#benefits {
+  display: none;
+  text-align: center;
+  padding: 48px;
+  .benefits-icon {
+    margin-bottom: 15px;
+    font-size: 40px;
+    color: #FFDC08;
+  }
+  .lead {
+    text-transform: uppercase;
+    color: #249CB1;
+    letter-spacing: 2px;
+    font-weight: bold;
+  }
+  .info {
+    font-size: 16px;
+    color: #7E7965;
+  }
+  img {
+    border-radius: 50%;
+    border: 8px solid #dddddd;
+    margin: 5px;
+  }
+  img:hover {
+    opacity: 0.85;
+  }
 }
 
 /* NAVBAR
@@ -299,22 +332,7 @@ table {
 -------------------------------------------------- */
 
 
-/* SERVICES CONTENT
--------------------------------------------------- */
 
-#benefits {
-  display: none;
-  text-align: center;
-  padding: 48px;
-  img {
-    border-radius: 50%;
-    border: 8px solid #dddddd;
-    margin: 5px;
-  }
-  img:hover {
-    opacity: 0.85;
-  }
-}
 
 /* EVENTS
 -------------------------------------------------- */
