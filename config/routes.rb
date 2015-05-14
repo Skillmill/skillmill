@@ -18,13 +18,16 @@ Rails.application.routes.draw do
   
   root 'pages#home'
 
-  get 'pages/about'
+  get 'about', to: 'pages#about'
+  get 'contact', to: 'pages#contact'
+  get 'frequently_asked_questions', to: 'pages#FAQ'
+  get 'how_it_works', to: 'pages#how_it_works'
+  get 'events', to: 'pages#events'
+  get 'community', to: 'pages#community'
+  get 'blog', to: 'pages#blog'
+  get 'tutorials', to: 'pages#tutorials'
+  get 'press', to: 'pages#press'
 
-  get 'pages/contact'
-
-  get 'pages/FAQ'
-
-  get 'pages/how_it_works'
 
   get 'myprojects' => "projects#customer"
 

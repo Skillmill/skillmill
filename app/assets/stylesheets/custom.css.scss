@@ -245,7 +245,7 @@ table {
 
 #how-it-works-btn {
   margin-top: 30px;
-  button {
+  a {
     background-color: #FFDC08;
     // background-color: #ffc708;
     padding: 6px 15px;
@@ -256,7 +256,7 @@ table {
     letter-spacing: 2px;
     color: #fff;
   }
-  button:hover {
+  a:hover {
     background-color: #249CB1;
     color: #FFDC08;
   }
