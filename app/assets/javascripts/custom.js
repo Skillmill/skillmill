@@ -11,4 +11,8 @@ $(document).ready(function() {
     $("#benefits").slideUp(200);
   });
 
+  $('.carousel').carousel({
+    interval: 8000
+  });
+
 });

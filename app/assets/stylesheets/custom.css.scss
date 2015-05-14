@@ -265,9 +265,22 @@ table {
         letter-spacing: 2px;
         margin: 0px;
       }
+      a {
+        background-color: transparent;
+        padding: 5px 15px;
+        border: 2px solid #FFDC08;
+        border-radius: 0px;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 2px;
+        color: #FFDC08;
+      }
+      a:hover {
+        background-color: #FFDC08;
+        color: #fff;
+      }
     }
   }
-
 }
 
 /* DESIGNERS
@@ -327,6 +340,7 @@ table {
   }
   .social-links {
     // margin-left: 30px;
+
   }
   .social-media {
     margin-top: 8px;
