@@ -1,9 +1,68 @@
+<div class="jumbotron" id="how-it-works-header">
+  <div class="container-fluid">
+    <%= render 'layouts/navbar' %>
+      This is the header section
+  </div>
+</div>
+<!-- Tour -->
+<div class="jumbotron" id="tour">
+  <div class="container-fluid">
+    <h3>Tour</h3>
+    <div class="col-md-4">Vertical Menu</div>
+    <div class="col-md-8">Slideshow of Screenshots</div>
+  </div>
+</div>
 <!-- Testimonials -->
 <div class="jumbotron" id="testimonials">
   <div class="container-fluid">
-    <h1>Testimonials</h1>
-    <blockquote>Post-ironic selfies quinoa lomo, tofu cardigan hella kogi mlkshk chillwave. Irony aesthetic wayfarers, Blue Bottle trust fund meditation chia beard. &mdash; R Johnson, 2013</blockquote>
-    <blockquote>Banjo post-ironic Echo Park shabby chic, brunch Etsy bitters semiotics scenester fashion axe ethical drinking vinegar art party deep v Godard. &mdash; K Smith, 2014</blockquote>
-    <blockquote>Butcher locavore vegan, flannel forage occupy photo booth heirloom post-ironic tilde lumbersexual actually sustainable roof party. &mdash; L Johns, 2013</blockquote>
+    <div class="row">
+      <h3>Testimonials</h3>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <blockquote>Post-ironic selfies quinoa lomo, tofu cardigan hella kogi mlkshk chillwave. Irony aesthetic wayfarers, Blue Bottle trust fund meditation chia beard. &mdash; R Johnson, 2013</blockquote>
+      </div>
+      <div class="col-md-4">
+        <blockquote>Banjo post-ironic Echo Park shabby chic, brunch Etsy bitters semiotics scenester fashion axe ethical drinking vinegar art party deep v Godard. &mdash; K Smith, 2014</blockquote>
+      </div>
+      <div class="col-md-4">
+        <blockquote>Butcher locavore vegan, flannel forage occupy photo booth heirloom post-ironic tilde lumbersexual actually sustainable roof party. &mdash; L Johns, 2013</blockquote>
+      </div>
+    </div>
   </div>
 </div>
+
+<!-- Featured -->
+<div class="jumbotron" id"featured">
+  <div class="container-fluid">
+    <h3>As seen on:</h3>
+    <div class="row">
+      <div class="col-md-3">
+        Techcrunch
+      </div>
+      <div class="col-md-3">
+        FastCompany
+      </div>
+      <div class="col-md-3">
+        Entrepreneur
+      </div>
+      <div class="col-md-3">
+        Business Insider
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Register -->
+<div class="jumbotron center" id="register_now">
+  <div class="container-fluid">
+    <h3>Register Now</h3>
+    <div>
+      <%= button_tag "Sign me up", class: "btn btn-success" %>
+    </div>
+    <div>
+      <%= link_to "No, thanks. Take me back", root_path, class: "btn btn-link" %>
+    </div>
+  </div>
+</div>
+

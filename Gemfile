@@ -17,6 +17,7 @@ gem 'fog'
 gem 'figaro'
 gem 'mini_magick'
 gem 'font-awesome-rails'
+gem 'searchkick'
 
 group :production do
   gem 'rails_12factor'
