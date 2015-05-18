@@ -22,6 +22,10 @@ body {
   text-align: center;
 }
 
+.hidden {
+  display: none;
+}
+
 .jumbotron {
   margin-bottom: 0px;
   background-color: #f7f7f7;
@@ -141,6 +145,60 @@ table {
 
 /* NAVBAR
 -------------------------------------------------- */
+
+.navbar {
+  margin-bottom: 0px;
+  border-radius: 0px;
+  background-color : transparent;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  li {
+    padding: 0px 10px;
+    a {
+      color: #fff;
+      padding: 3px 0px 0px;
+    }
+  }
+  .navbar-header {
+    img {
+      height: 30px;
+    }
+    .navbar-brand {
+      padding: 0px;
+    }
+  }
+  .navbar-nav {
+    margin-top: 6px;
+  }
+  
+  #menu-right {
+    input {
+      margin-right: 0px;
+      margin-top: -3px;
+      border-radius: 20px;
+      background-color: transparent;
+      border-color: #fff;
+    }
+    input:hover {
+      background-color: #fff;
+      color: #000;
+    }
+    a:hover {
+      background-color: transparent;
+      color: #FFDC08;
+      // font-weight: bold;
+
+    }
+  }
+  #menu-left {
+    margin-left: 4em;
+    
+    a:hover {
+      background-color: transparent;
+      border-bottom: 3px solid #FFDC08;
+    }
+  }
+}
 
 
 
@@ -262,6 +320,118 @@ table {
   }
 }
 
+/* HOW IT WORKS TOUR PAGE
+-------------------------------------------------- */
+#how-it-works-header {
+  padding-top: 20px;
+  background-color: #04b3ba;
+}
+
+#tour {
+  .form {
+    position:relative;
+    background:#fff;
+    width:280px;
+    margin:auto;
+    padding:0;
+    list-style: none;
+    overflow:hidden;
+    
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px; 
+    
+    -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+    box-shadow:  1px 1px 10px rgba(0, 0, 0, 0.1); 
+
+    li a {
+      width:280px;
+      padding-left:20px;
+      height:50px;
+      line-height:50px;
+      display:block;
+      overflow:hidden;
+      position:relative;
+      text-decoration:none;
+      text-transform:uppercase;
+      font-size:14px;
+      color:#686868;
+      
+      -webkit-transition:all 0.2s linear;
+      -moz-transition:all 0.2s linear;
+      -o-transition:all 0.2s linear;
+      transition:all 0.2s linear;     
+    }
+    li a:hover {
+      background:#efefef;
+    }
+
+    .step-1 {
+      border-left:5px solid #008747;
+    }
+
+    .step-2 {
+      border-left:5px solid #fecf54;
+    }
+    
+    .step-3 {
+      border-left:5px solid #cf2130;
+    }
+    .step-4 {
+      border-left:5px solid #dde2d5;
+    } 
+    li:first-child a:hover, .form li:first-child a {
+      -webkit-border-radius: 5px 5px 0 0;
+      -moz-border-radius: 5px 5px 0 0;
+      border-radius: 5px 5px 0 0;
+    }
+
+    li:last-child a:hover, li:last-child a {
+      -webkit-border-radius: 0 0 5px 5px;
+      -moz-border-radius: 0 0 5px 5px;
+      border-radius: 0 0 5px 5px;
+    }
+
+    li a:hover i {
+      color:#ea4f35;
+    }
+
+    i {
+      margin-right:15px;
+      
+      -webkit-transition:all 0.2s linear;
+      -moz-transition:all 0.2s linear;
+      -o-transition:all 0.2s linear;
+      transition:all 0.2s linear; 
+    }
+    li.selected a {
+      background:#efefef;
+    }
+  }
+  #tour-image {
+    .first-image {
+      // background-image: url('Skillmill_logo2.png');
+      background-repeat: no-repeat;
+      // height: 100px;
+    }
+    .second-image {
+      // background-image: url('Skillmill_logo3.png');
+      background-repeat: no-repeat;
+      // height: 100px;
+    }
+  }
+}
+
+#testimonials {
+  background-color: #04b3ba;
+}
+
+#register_now {
+  .register {
+    padding: 20px 0px 10px;
+  }
+}
 /* CATEGORIES
 -------------------------------------------------- */
 #categories-menu {

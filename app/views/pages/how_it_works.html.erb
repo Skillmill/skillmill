@@ -1,19 +1,35 @@
 <div class="jumbotron" id="how-it-works-header">
   <div class="container-fluid">
     <%= render 'layouts/navbar' %>
-      This is the header section
+      This is the header section which should include a paragraph explaining one benefit of Skillmill in more detail
   </div>
 </div>
+
 <!-- Tour -->
 <div class="jumbotron" id="tour">
   <div class="container-fluid">
-    <h3>Tour</h3>
-    <div class="col-md-4">Vertical Menu</div>
-    <div class="col-md-8">Slideshow of Screenshots</div>
+    <h3 class="center">Tour</h3>
+    <div class="col-md-4">
+      <ul class="form">
+        <li class="selected"><a class="step-1" href="#"><i class="fa fa-user"></i>Step 1: Post a Project</a></li>
+        <li><a class="step-2" href="#"><i class="fa fa-group"></i>Step 2: Get Contacted</a></li>
+        <li><a class="step-3" href="#"><i class="fa fa-cog"></i>Step 3: Pick the best Design</a></li>
+        <li><a class="step-4" href="#"><i class="fa fa-rocket"></i>Step 4: Complete Project</a></li>
+      </ul>
+    </div>
+    <div class="col-md-8">
+      <div id="tour-image">
+        <div class="first-image">1</div>
+        <div class="second-image hidden">2</div>
+        <div class="third-image hidden">3</div>
+        <div class="fourth-image hidden">4</div>
+      </div>
+    </div>
   </div>
 </div>
+
 <!-- Testimonials -->
-<div class="jumbotron" id="testimonials">
+<div class="jumbotron center" id="testimonials">
   <div class="container-fluid">
     <div class="row">
       <h3>Testimonials</h3>
@@ -32,32 +48,11 @@
   </div>
 </div>
 
-<!-- Featured -->
-<div class="jumbotron" id"featured">
-  <div class="container-fluid">
-    <h3>As seen on:</h3>
-    <div class="row">
-      <div class="col-md-3">
-        Techcrunch
-      </div>
-      <div class="col-md-3">
-        FastCompany
-      </div>
-      <div class="col-md-3">
-        Entrepreneur
-      </div>
-      <div class="col-md-3">
-        Business Insider
-      </div>
-    </div>
-  </div>
-</div>
-
 <!-- Register -->
 <div class="jumbotron center" id="register_now">
   <div class="container-fluid">
     <h3>Register Now</h3>
-    <div>
+    <div class="register">
       <%= button_tag "Sign me up", class: "btn btn-success" %>
     </div>
     <div>
