@@ -12,25 +12,26 @@
           <div>
             <span class="category-icon fa fa-building-o"></span>
           </div>
-          <div class="category-name">Architecture</div>
+          <div class="category-name"><%= link_to "Architecture", categories_architecture_path %></div>
+
         </div>
         <div class="col-md-3">
           <div>
             <span class="category-icon glyphicon glyphicon-edit"></span>
           </div>
-          <div class="category-name">Graphic Design</div>
+          <div class="category-name"><%= link_to "Graphic Design", categories_graphic_design_path %></div>
         </div>
         <div class="col-md-3">
           <div>
             <span class="category-icon glyphicon glyphicon-cloud-upload"></span>
           </div>
-          <div class="category-name">Web Design</div>
+          <div class="category-name"><%= link_to "Web Design", categories_web_design_path %></div>
         </div>
         <div class="col-md-3">
           <div>
             <span class="category-icon glyphicon glyphicon-headphones"></span>
           </div>
-          <div class="category-name">Audio & Music</div>
+          <div class="category-name"><%= link_to "Audio & Music", categories_audio_and_music_path %></div>
         </div>
     </div>
     <div class="row category-menu center">
@@ -38,29 +39,30 @@
           <div>
             <span class="category-icon glyphicon glyphicon-camera"></span>
           </div>
-          <div class="category-name">Photography</div>
+          <div class="category-name"><%= link_to "Photography", categories_photography_path %></div>
         </div>
         <div class="col-md-3">
           <div>
             <span class="category-icon glyphicon glyphicon-film"></span>
           </div>
-          <div class="category-name">Film & Video</div>
+          <div class="category-name"><%= link_to "Film & Video", categories_film_and_video_path %></div>
         </div>
         <div class="col-md-3">
           <div>
             <span class="category-icon glyphicon glyphicon-pencil"></span>
           </div>
-          <div class="category-name">Writing</div>
+          <div class="category-name"><%= link_to "Writing", categories_writing_path %></div>
         </div>
         <div class="col-md-3">
           <div>
             <span class="category-icon fa fa-laptop"></span>
           </div>
-          <div class="category-name">Software Development</div>
+          <div class="category-name"><%= link_to "Software Development", categories_software_development_path %></div>
         </div>
     </div>
     <div class="row section-btn center">
-      <button class="btn btn-warning" type="submit">Other</button>
+      <!-- <button class="btn btn-warning" type="submit">Other</button> -->
+      <%= button_to "Other", categories_other_path, class: "btn btn-warning" %>
     </div>
   </div>
 </div>

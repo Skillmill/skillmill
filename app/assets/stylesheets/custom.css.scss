@@ -76,7 +76,7 @@ body {
 
 .section-btn {
   margin-top: 30px;
-  button {
+  input {
     background-color: transparent;
     padding: 0px 0px 1px;
     border: none;
@@ -87,7 +87,7 @@ body {
     letter-spacing: 2px;
     color: #249CB1;
   }
-  button:hover {
+  input:hover {
     background-color: transparent;
     border-bottom: 5px solid #249CB1;
     color: #FFDC08;
@@ -324,13 +324,23 @@ table {
 -------------------------------------------------- */
 #how-it-works-header {
   padding-top: 20px;
-  background-color: #04b3ba;
+  background-color: #04bab2;
   height: 520px;
+  .header-text {
+    padding: 0px 120px;
+  }
   h1 {
     padding-top: 80px;
     margin-bottom: 30px;
+    font-size: 50px;
+    span {
+      color: #074659;
+      font-weight: 800;
+    }
   }
-
+  h1, p {
+    color: #fff;
+  }
 }
 
 #tour {
@@ -460,9 +470,15 @@ table {
     .category-name {
       text-transform: uppercase;
       font-size: 14px;
-      color: #7E7965;
       letter-spacing: 1.5px;
       font-weight: bold;
+      a {
+        color: #7E7965;
+      }
+      a:hover {
+        color: #249CB1;
+        text-decoration: none;
+      }
     }
   }
 }

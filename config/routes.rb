@@ -1,7 +1,17 @@
 Rails.application.routes.draw do
 
 
-  resources :categories
+  resources :categories 
+  # question: why is params not showing category name when i use collection ?
+  get 'categories/architecture', to: 'categories#show'
+  get 'categories/graphic-design', to: 'categories#show'
+  get 'categories/web-design', to: 'categories#show'
+  get 'categories/audio-and-music', to: 'categories#show'
+  get 'categories/film-and-video', to: 'categories#show'
+  get 'categories/photography', to: 'categories#show'
+  get 'categories/writing', to: 'categories#show'
+  get 'categories/software-development', to: 'categories#show'
+  get 'categories/other', to: 'categories#show'
 
   devise_for :users
 

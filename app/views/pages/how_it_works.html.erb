@@ -2,8 +2,8 @@
   <div class="container-fluid">
     <%= render 'layouts/navbar' %>
     <div class="row center">
-      <div class="col-md-12">
-        <h1>Everything you ever wanted <br> a  <strong>Creative Online Marketplace</strong> to be.</h2>
+      <div class="header-text col-md-12">
+        <h1>Everything you ever wanted <br>a <span>Creative Online Marketplace</span> to be.</h2>
         <p>Find high-caliber creative work that pays you what you are worth. Team up with other talented individuals like yourself. Get recognized for your talents in a global community. Ask Industry Experts for advice and have them donate to a good cause in the process.</p>
       </div>
     </div>
@@ -66,7 +66,7 @@
   <div class="container-fluid">
     <h3>Register Now</h3>
     <div class="register">
-      <%= button_tag "Sign me up", class: "btn btn-success" %>
+      <%= button_to "Sign me up", new_user_registration_path, class: "btn btn-success", method: :get %>
     </div>
     <div>
       <%= link_to "No, thanks. Take me back", root_path, class: "btn btn-link" %>
