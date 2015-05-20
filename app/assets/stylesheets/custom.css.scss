@@ -487,6 +487,19 @@ table {
 #register_now {
   .register {
     padding: 20px 0px 10px;
+    input {
+      background-color: transparent;
+      color: #04b3ba;
+      border: 2px solid #04b3ba;
+      border-radius: 0px;
+      padding: 8px 15px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    input:hover {
+      background-color: #04bab2;
+      color: #fff;
+    }
   }
 }
 /* CATEGORIES
@@ -561,6 +574,7 @@ table {
       a:hover {
         background-color: #FFDC08;
         color: #fff;
+
       }
     }
   }
