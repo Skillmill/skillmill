@@ -141,6 +141,34 @@ table {
   img:hover {
     opacity: 0.85;
   }
+  .benefit-keypoints {
+    margin-top: 30px;
+    text-align: left;
+    font-size: 14px;
+    .col-md-2 {
+      text-align: center;
+      i {
+        color: #249CB1;
+      }
+    }
+    .col-md-10 {
+      color: #7E7965;
+    }
+  }
+  #keypoints {
+    display: none;
+  }
+  #benefits-less {
+    display: none;
+  }
+  .section-btn {
+    button {
+      background-color: transparent;
+      border: none;
+      color: #249CB1;
+      font-weight: bold;
+    }
+  }
 }
 
 /* NAVBAR
@@ -159,6 +187,10 @@ table {
       padding: 3px 0px 0px;
     }
   }
+  .nav a:focus {
+    background-color: transparent;
+  }
+  
   .navbar-header {
     img {
       height: 30px;
@@ -235,6 +267,9 @@ table {
     }
     
     #menu-right {
+      .dropdown-menu {
+        background-color: transparent;
+      }
       input {
         margin-right: 0px;
         margin-top: -3px;

@@ -6,6 +6,19 @@ $(document).ready(function() {
     $("#benefits").slideDown(200);
   });
 
+  $(document).on('click', "#benefits-more", function(e) {
+    e.preventDefault();
+    $("#keypoints").slideDown(200);
+    $("#benefits-more").hide();
+    $("#benefits-less").show();
+  });
+  $(document).on('click', "#benefits-less", function(e) {
+    e.preventDefault();
+    $("#keypoints").slideUp(200);
+    $("#benefits-less").hide();
+    $("#benefits-more").show();
+  });
+
   $(document).on('click', "#close-benefits-btn", function(e) {
     e.preventDefault();
     $("#benefits").slideUp(200);

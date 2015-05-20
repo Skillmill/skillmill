@@ -1,9 +1,6 @@
 class PagesController < ApplicationController
   def home
-    @categories = Category.all
-    @categories_1 = @categories[0..3]
-    @categories_2 = @categories[4..7]
-    @category_3 = @categories.last.name
+    @projects = Project.all.order('created_at DESC')[0..3]
   end
 
   def about

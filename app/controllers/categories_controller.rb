@@ -12,6 +12,7 @@ class CategoriesController < ApplicationController
   def show
     # binding.pry
     @category = Category.where(name: params["id"].capitalize).first
+    @projects = Project.where(category: @category)
   end
 
   # GET /categories/new
