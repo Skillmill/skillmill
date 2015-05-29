@@ -219,7 +219,6 @@ table {
       background-color: transparent;
       color: #FFDC08;
       // font-weight: bold;
-
     }
   }
   #menu-left {
@@ -332,6 +331,15 @@ table {
     .input-group-btn {
       width: 40px;
       margin-left: -2px;
+    }
+    #input-filter {
+      position: absolute;
+      border: none;
+      width: 15%;
+      background-color: transparent;
+      left: 0px;
+      height: 100%;
+      z-index: 3;
     }
   }
 }

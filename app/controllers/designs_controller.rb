@@ -3,12 +3,12 @@ class DesignsController < ApplicationController
   # before_action :set_project
   before_action :authenticate_user!
 
-  # GET /ative_posts
-  def active_posts
-    # @project = Project.where(customer: current_user).find(params[:project_id])
-               # current_user.projects.find(.....)
-    @designs = Design.all.where(customer: current_user).order("created_at DESC")
-  end
+  # # GET /ative_posts
+  # def active_posts
+  #   # @project = Project.where(customer: current_user).find(params[:project_id])
+  #              # current_user.projects.find(.....)
+  #   @designs = Design.all.where(customer: current_user).order("created_at DESC")
+  # end
 
   # GET /submitted_designs
   def submitted_designs

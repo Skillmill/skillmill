@@ -37,11 +37,13 @@ Rails.application.routes.draw do
   get 'blog', to: 'pages#blog'
   get 'tutorials', to: 'pages#tutorials'
   get 'press', to: 'pages#press'
+  get 'creatives', to: 'pages#creatives'
+  get 'customers', to: 'pages#customers'
 
 
   get 'myprojects' => "projects#customer"
 
-  get 'active-posts' => "designs#active_posts"
+  # get 'active-posts' => "designs#active_posts"
 
   get 'submitted-designs' => "designs#submitted_designs"
 
