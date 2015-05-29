@@ -23,12 +23,10 @@ class User < ActiveRecord::Base
 
   def creative?
     self.role == "creative"
-    # self.creative == true
   end
 
   def customer?
     self.role == "customer"
-    # self.customer == true
   end
 
 end

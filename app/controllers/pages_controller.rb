@@ -4,12 +4,6 @@ class PagesController < ApplicationController
   end
 
   def about
-    # if current_user.customer
-    #   render 'customer/about'
-    #   render 'about_customer'
-    # else
-    #   render 'creative/about'
-    # end
   end
 
   def contact
