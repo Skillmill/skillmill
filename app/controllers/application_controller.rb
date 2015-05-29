@@ -15,10 +15,4 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.for(:account_update) << :first_name
     devise_parameter_sanitizer.for(:account_update) << :last_name
   end
-
-  def after_sign_up_path_for(resource)
-    binding.pry
-    creatives_path if current_user.creative?
-    customers_path if current_user.customer?
-  end
 end

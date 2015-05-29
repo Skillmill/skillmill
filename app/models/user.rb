@@ -7,7 +7,6 @@ class User < ActiveRecord::Base
   # enabling :role (customer or creative) during sign-up process
   attr_accessor :role  
   before_save :assign_roles
-  # validates :role, presence: true    
 
   validates :role, :first_name, :last_name, :email, presence: true
   validates_format_of :email, :with => /@/
@@ -18,11 +17,8 @@ class User < ActiveRecord::Base
   has_many :submitted_designs, class_name: "Design", foreign_key: "designer_id"
 
   def assign_roles
-    if self.role == 'customer'
-      write_attribute(:customer , true)
-    else
-      write_attribute(:creative , true)
-    end
+    write_attribute(:customer , true) if self.role == 'customer'
+    write_attribute(:creative , true) if self.role == 'creative'
   end
 
   def creative?

@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   get 'categories/software-development', to: 'categories#show'
   get 'categories/other', to: 'categories#show'
 
-  devise_for :users
+  devise_for :users, controllers: {registrations: 'registrations'}
 
   # Shallow nesting of resources: 
   resources :projects do
