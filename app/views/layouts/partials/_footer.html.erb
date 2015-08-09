@@ -1,0 +1,60 @@
+<!--footer-->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-4">
+        <div class="footer-nav">
+          <h3>RESOURCES</h3>
+          <ul>
+            <li><%= link_to "Blog", blog_path %></li>
+            <li><%= link_to "Tutorials", tutorials_path %></li>
+            <li><%= link_to "Press", press_path %></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-4">
+        <div class="footer-nav">
+          <h3>COMPANY INFO</h3>
+          <ul>
+            <li><%= link_to "Contact", contact_path %></li>
+            <li><%= link_to "About", about_path %></li>
+            <li><%= link_to "FAQ", frequently_asked_questions_path %></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-4">
+        <div class="social-icons">
+          <h3>Follow us</h3>
+          <ul>
+
+            <li><a href="<%= contact_path %>"><span class="icon-facebook"> </span></a></li>
+            <li><a href="<%= contact_path %>"><span class="icon-twitter"> </span></a></li>
+            <li><a href="<%= contact_path %>"><span class="icon-pinterest"> </span></a></li>
+            <li><a href="<%= contact_path %>"><span class="icon-google"> </span></a></li>
+            <li><a href="<%= contact_path %>"><span class="icon-vimeo"> </span></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-footer">
+      <div class="row">
+        <div class="col-md-4 col-sm-4">
+          <p> © <%= Date.today.year %> SkillMill GesmbH</p>
+        </div>
+        <div class="col-md-4 col-sm-4 text-center">
+          <ul>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Privacy Policy </a></li>
+            <li><a href="#">Imprint</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 col-sm-4 text-right">
+          <ul>
+            <li><a href="#">Change Language</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!--/footer-->

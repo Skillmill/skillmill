@@ -1,34 +1,265 @@
-<!-- Main Search Window -->
-<div class="jumbotron" id="main-header">
-  <div class="container-fluid">
-    <%= render 'layouts/navbar' %>
-    <div class="center" id="main-search-field">
-      <h1>Find <span id="projects">Projects</span> and <span id="creatives">Creatives</span></h1>
-      <form class="navbar-form" role="search">
-        <div class="input-group">
-          <!-- <select class="form-control" id="input-filter">
-            <option>Projects</option>
-            <option>Creatives</option>
-          </select> -->
-          <input type="text" class="form-control" placeholder="Search">
-          <div class="input-group-btn">
-              <button class="btn btn-warning" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+<!--section-->
+<section class="section-showcase">
+  <div class="container">
+    <div class="bannerContent">
+      <p>Renovent Yourself</p>
+    </div>
+  </div>
+</section>
+<!--/section-->
+<!--section-->
+<section class="projectsBlock">
+  <div class="container">
+    <h4>find</h4>
+    <h1>Projects <span class="icon-b_and"></span> Creatives</h1>
+    <div class="projectContent">
+      <div class="form-wrap">
+        <div class="form-group">
+          <ul class="clearfix">
+            <li>
+              <select>
+                <option>Search Creatives</option>
+                <option>Search Projects</option>
+              </select>
+            </li>
+            <li>
+              <div class="input-wrap"><input type="text" class="form-control" placeholder="e.g. Webdesign "> <button type="submit" class="submit"><i class="fa fa-search"></i></button></div>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+      <h5>How it works</h5>
+      <div class="categories">
+        <div class="row">
+          <div class="col-md-3 col-sm-3">
+            <div class="thumb">
+              <div class="design"> <a href="#"><img src="/assets/v2/category_01.png" alt=""></a> </div>
+              <p><a href="#">Architecture</a></p>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-3">
+            <div class="thumb">
+              <div class="design"> <a href="#"><img src="/assets/v2/category_02.png" alt=""></a> </div>
+              <p><a href="#">Graphic Design</a></p>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-3">
+            <div class="thumb">
+              <div class="design"> <a href="#"><img src="/assets/v2/category_03.png" alt=""></a> </div>
+              <p><a href="#">Web Design</a></p>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-3">
+            <div class="thumb">
+              <div class="design"> <a href="#"><img src="/assets/v2/category_04.png" alt=""></a> </div>
+              <p><a href="#">Audio & Music</a></p>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-3">
+            <div class="thumb">
+              <div class="design"> <a href="#"><img src="/assets/v2/category_05.png" alt=""></a> </div>
+              <p><a href="#">Photography</a></p>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-3">
+            <div class="thumb">
+              <div class="design"> <a href="#"><img src="/assets/v2/category_06.png" alt=""></a> </div>
+              <p><a href="#">Film & Video</a></p>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-3">
+            <div class="thumb">
+              <div class="design"> <a href="#"><img src="/assets/v2/category_07.png" alt=""></a> </div>
+              <p><a href="#">Writing</a></p>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-3">
+            <div class="thumb">
+              <div class="design"> <a href="#"><img src="/assets/v2/category_08.png" alt=""></a> </div>
+              <p><a href="#">Software</a></p>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-3">
+            <div class="thumb">
+              <div class="design"> <a href="#"><img src="/assets/v2/category_09.png" alt=""></a> </div>
+              <p><a href="#">Advertising</a></p>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-3">
+            <div class="thumb">
+              <div class="design"> <a href="#"><img src="/assets/v2/category_10.png" alt=""></a> </div>
+              <p><a href="#">Art</a></p>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-3">
+            <div class="thumb">
+              <div class="design"> <a href="#"><img src="/assets/v2/category_11.png" alt=""></a> </div>
+              <p><a href="#">Design</a></p>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-3">
+            <div class="thumb">
+              <div class="design"> <a href="#"><img src="/assets/v2/category_12.png" alt=""></a> </div>
+              <p><a href="#">3D</a></p>
+            </div>
           </div>
         </div>
-      </form>
-      <div class="row center" id="how-it-works-btn">
-        <!-- <button class="btn btn-warning" type="submit">How it works</button> -->
-        <%= link_to "How it works", how_it_works_path, class: "btn btn-warning" %>
+      </div>
+      <div class="category-1">
+        <div class="row">
+          <div class="col-md-6 col-sm-6">
+            <div class="thumb">
+              <div class="design"> <a href="#"><img src="/assets/v2/category_13.png" alt=""></a> </div>
+              <p><a href="#">Idea</a></p>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-6">
+            <div class="thumb">
+              <div class="design"> <a href="#"><img src="/assets/v2/category_14.png" alt=""></a> </div>
+              <p><a href="#">Presentation</a></p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    
+    <div class="recentProject">
+      <h2>Recent Projects</h2>
+      <div class="row">
+
+        <% @projects.last(4).each do |project| %>
+            <div class="col-md-3 col-sm-3">
+              <div class="projectBlock">
+                <div class="projectImg"> <a href="#"><img src="<%= project.image %>" alt="placeholder 1"></a> </div>
+                <p><img src="/assets/v2/icon.png" alt=""> <small><%= project.title %></small></p>
+                <h3><a href="#">ARTISTIC IMAGE OF BIRDS</a></h3>
+                <p>posted by: <strong><%= "#{project.user.first_name.capitalize} #{project.user.last_name.capitalize[0]}." %></strong></p>
+                <p>Date Submitted: <strong><%= project.created_at.strftime("%-m/%-d/%-y") %></strong></p>
+                <p><big><%= number_to_currency(project.price) %></big></p>
+                <p><%= project.description %></p>
+                <p><a href="#">Details</a></p>
+              </div>
+            </div>
+      <% end %>
+      </div>
+      <div class="see"><a href="<%= projects_path %>">See all</a> </div>
+    </div>
   </div>
-</div>
+</section>
+<!--/section-->
+<!--section-->
+<section class="postProject">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 col-md-offset-2">
+        <div class="contentHolder">
+          <div class="pBlock">
+            <h2>got a Project?</h2>
+            <h3>You want a project to be done by an incredible creative?</h3>
+            <p>Post your project and get stunning results from our creatives. Our community can rate the results and help you pick the solution that fits best to your needs. </p>
+            <div class="see"><a href="<%= new_project_path %>">Post a Project</a> </div>
+          </div>
+          <div class="start">
+            <p> Start your own Project</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--/section-->
+<!--section-->
+<section class="Carousel-wrap">
+  <div class="container">
+    <div class="carouselHolder">
+      <div class="flexslider" id="carousel">
+        <ul class="slides">
+          <li>
+            <div class="carousel-content">
+              <p><big>12,345,879</big></p>
+              <p><small>REGISTERED USERS</small></p>
+            </div>
+          </li>
+          <li>
+            <div class="carousel-content">
+              <p><big>9,345,623</big></p>
+              <p><small>ProjectsS</small></p>
+            </div>
+          </li>
+          <li>
+            <div class="carousel-content">
+              <p><big>20,908</big></p>
+              <p><small>Active Users</small></p>
+            </div>
+          </li>
+          <li>
+            <div class="carousel-content">
+              <p><big>12,345,879</big></p>
+              <p><small>REGISTERED USERS</small></p>
+            </div>
+          </li>
+          <li>
+            <div class="carousel-content">
+              <p><big>9,345,623</big></p>
+              <p><small>ProjectsS</small></p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<!--/section-->
 
-<%= render 'layouts/categories' %>
-<%= render 'layouts/projects' %>
-<%= render 'layouts/carousel' %>
-<%= render 'layouts/designers' %>
-<%= render 'layouts/events' %>
-
-
+<!--section-->
+<section class="FeaturedCreative">
+  <div class="container">
+    <div class="recentProject">
+      <h2>Featured Creatives</h2>
+      <div class="row">
+        <div class="col-md-3 col-sm-3">
+          <div class="projectBlock">
+            <div class="projectImg"> <a href="#"><img src="/assets/v2/img4.jpg" alt=""></a> </div>
+            <h3><a href="#">LISTICLE ECHO PARK</a></h3>
+            <p>IPhone try-hard Schlitz, craft beer post-ironic Wes Anderson ...</p>
+            <p><a href="#">Profile</a></p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-3">
+          <div class="projectBlock">
+            <div class="projectImg"> <a href="#"><img src="/assets/v2/img5.jpg" alt=""></a> </div>
+            <h3><a href="#">ORGANIC BICYCLE RIGHTS</a></h3>
+            <p>Whatever deep v banh mi cold-pressed bitters cornhole ...</p>
+            <p><a href="#">Profile</a></p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-3">
+          <div class="projectBlock">
+            <div class="projectImg"> <a href="#"><img src="/assets/v2/img6.jpg" alt=""></a> </div>
+            <h3><a href="#">KALE CHIPS SELVAGE</a></h3>
+            <p>Crucifix vegan letterpress, Intelligentsia photo booth disrupt ...</p>
+            <p><a href="#">Profile</a></p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-3">
+          <div class="projectBlock">
+            <div class="projectImg"> <a href="#"><img src="/assets/v2/img7.jpg" alt=""></a> </div>
+            <h3><a href="#">FINGERSTACHE BROOKLYN</a></h3>
+            <p>Etsy asymmetrical hoodie trust fund swag sustainable chia ...</p>
+            <p><a href="#">Profile</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="see"><a href="#">See all</a> </div>
+      <div class="events">
+        <h2> Events</h2>
+        <h5>SUPER COMPETITION</h5>
+        <p>AUGUST 22, 2015 LONDON, UK</p>
+        <p><big>Bitters trust fund Odd Future, sartorial pork belly wayfarers High Life brunch butcher vegan. Forage Williamsburg cliche kale chips. Next level ennui banjo, narwhal shabby chic Helvetica retro freegan authentic distillery Carles butcher locavore.</big></p>
+        <p><a href="#">Details</a></p>
+        <div class="see"><a href="#">See all</a> </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--/section-->

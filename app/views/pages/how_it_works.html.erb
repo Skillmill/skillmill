@@ -1,76 +1,193 @@
-<div class="jumbotron" id="how-it-works-header">
-  <div class="container-fluid">
-    <%= render 'layouts/navbar' %>
-    <div class="row center">
-      <div class="header-text col-md-12">
-        <h1>Everything you ever wanted <br>a <span>Creative Online Marketplace</span> to be.</h2>
-        <p>Find high-caliber creative work that pays you what you are worth. Team up with other talented individuals like yourself. Get recognized for your talents in a global community. Ask Industry Experts for advice and have them donate to a good cause in the process.</p>
-      </div>
+<section class="howBanner">
+  <div class="container">
+    <div class="bannerContent">
+      <p>Discover Yourself</p>
     </div>
   </div>
-</div>
+</section>
+<!--/section-->
+<!--section-->
+<section class="tourBlock">
+  <div class="container">
+    <h2>TAKE A TOUR</h2>
 
-<!-- Tour -->
-<div class="jumbotron" id="tour">
-  <div class="container-fluid">
-    <div class="row section-header center">
-      <div>
-        <span class="fa fa-clipboard"></span>
-        <h3>Take A Tour</h3>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <ul class="form">
-        <li class="selected"><a class="step-1" href="#"><i class="fa fa-file"></i>Step 1: Post a Project</a></li>
-        <li><a class="step-2" href="#"><i class="fa fa-group"></i>Step 2: Get Contacted</a></li>
-        <li><a class="step-3" href="#"><i class="fa fa-hand-o-up"></i>Step 3: Pick the best Design</a></li>
-        <li><a class="step-4" href="#"><i class="fa fa-rocket"></i>Step 4: Complete Project</a></li>
-      </ul>
-    </div>
-    <div class="col-md-8">
-      <div id="tour-image">
-        <div class="first-image">Show FIRST awesome graphic</div>
-        <div class="second-image hidden">Show SECOND awesome graphic</div>
-        <div class="third-image hidden">Show THIRD awesome graphic</div>
-        <div class="fourth-image hidden">Show FOURTH awesome graphic</div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Testimonials -->
-<div class="jumbotron center" id="testimonials">
-  <div class="container-fluid">
-    <div class="row section-header center">
-      <div>
-        <span class="fa fa-clipboard"></span>
-        <h3>Testimonials</h3>
-      </div>
-    </div>
     <div class="row">
-      <div class="col-md-4">
-        <blockquote>Post-ironic selfies quinoa lomo, tofu cardigan hella kogi mlkshk chillwave. Irony aesthetic wayfarers, Blue Bottle trust fund meditation chia beard. &mdash; R Johnson, 2013</blockquote>
-      </div>
-      <div class="col-md-4">
-        <blockquote>Banjo post-ironic Echo Park shabby chic, brunch Etsy bitters semiotics scenester fashion axe ethical drinking vinegar art party deep v Godard. &mdash; K Smith, 2014</blockquote>
-      </div>
-      <div class="col-md-4">
-        <blockquote>Butcher locavore vegan, flannel forage occupy photo booth heirloom post-ironic tilde lumbersexual actually sustainable roof party. &mdash; L Johns, 2013</blockquote>
-      </div>
-    </div>
-  </div>
-</div>
+      <div class="col-md-8 col-sm-8 col-md-offset-4 col-sm-offset-4">
+        <div class="two-col clearfix">
+          <div class="border"></div>
+          <div class="bullet"> 1.</div>
+          <div class="contents">
+            <h3>Create your profile</h3>
 
-<!-- Register -->
-<div class="jumbotron center" id="register_now">
-  <div class="container-fluid">
-    <h3>Register Now</h3>
-    <div class="register">
-      <%= button_to "Sign me up", new_user_registration_path, class: "btn btn-success", method: :get %>
-    </div>
-    <div>
-      <%= link_to "No, thanks. Take me back", root_path, class: "btn btn-link" %>
+            <p>Just get registered and start browsing projects, building your network and working on projects.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12 col-sm-12">
+        <div class="two-col1 two-col clearfix">
+          <div class="border"></div>
+          <div class="odd bullet"> 1.</div>
+          <div class="contents">
+            <h3>Initiate your project</h3>
+
+            <p>Tell our community what kind of project you need to get done and give them some footage.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-7 col-sm-7 col-md-offset-5 col-sm-offset-5">
+        <div class="two-col2 two-col clearfix">
+          <div class="border"></div>
+          <div class="bullet"> 2.</div>
+          <div class="contents">
+            <h3>Search for projects</h3>
+
+            <p>Find that kind of project you wanna work on and choose from a large variety of working modes.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-11 col-sm-12 col-md-offset-1">
+        <div class="two-col3 two-col clearfix">
+          <div class="border"></div>
+          <div class="odd bullet"> 2.</div>
+          <div class="contents">
+            <h3>Get solutions</h3>
+
+            <p>Receive one or many solutions and from
+              drifferent kind of creatives.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8 col-sm-8 col-md-offset-4 col-sm-offset-4">
+        <div class="two-col4 two-col clearfix">
+          <div class="border"></div>
+          <div class="bullet"> 3.</div>
+          <div class="contents">
+            <h3>Participate in projects</h3>
+
+            <p>Show your skills and get feedback from the community. Be part of team that gets the challenge done.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12 col-sm-12">
+        <div class="two-col5 two-col clearfix">
+          <div class="border"></div>
+          <div class="odd bullet"> 3.</div>
+          <div class="contents">
+            <h3>Choose your favourite</h3>
+
+            <p>From all submitted projects you can choose the one you like best or let the community make the
+              choice.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-6 col-md-offset-6 col-sm-offset-6">
+        <div class="two-col6 two-col clearfix">
+          <div class="border"></div>
+          <div class="bullet"> 4.</div>
+          <div class="contents">
+            <h3>Get paid</h3>
+
+            <p>Can’t exist on love and air alone?
+              Get a fair reward right after your job is done.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-10 col-sm-11 col-md-offset-2 col-sm-offset-1">
+        <div class="two-col7 two-col clearfix">
+          <div class="odd bullet"> 4.</div>
+          <div class="contents">
+            <h3>Pay the chosen creative</h3>
+
+            <p>A good jobs needs a appropriate
+              reward. Pay in a secure mode.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
+</section>
+<!--/section-->
+<!--section-->
+<section class="testimonial Carousel-wrap">
+  <div class="container">
+    <div class="carouselHolder">
+      <div class="flexslider" id="banner">
+        <ul class="slides">
+          <li>
+            <div class="testimonial-wrap">
+              <div class="row">
+                <div class="col-md-8 col-sm-8 col-xs-6">
+                  <div class="testimonialDesc">
+                    <p>These guys’re amazing. I had so much fun during this project and enjoyed the unrestrained
+                      exchange of knowledge</p>
+                    .
+                    <p>
+                      <small>Ed Ruscha, Artist</small>
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-6">
+                  <div class="image"><img src="/assets/v2/user.png" alt=""></div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="testimonial-wrap">
+              <div class="row">
+                <div class="col-md-8 col-sm-8 col-xs-6">
+                  <div class="testimonialDesc">
+                    <p>These guys’re amazing. I had so much fun during this project and enjoyed the unrestrained
+                      exchange of knowledge</p>
+                    .
+                    <p>
+                      <small>Ed Ruscha, Artist</small>
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-6">
+                  <div class="image"><img src="/assets/v2/user.png" alt=""></div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="testimonial-wrap">
+              <div class="row">
+                <div class="col-md-8 col-sm-8 col-xs-6">
+                  <div class="testimonialDesc">
+                    <p>These guys’re amazing. I had so much fun during this project and enjoyed the unrestrained
+                      exchange of knowledge</p>
+                    .
+                    <p>
+                      <small>Ed Ruscha, Artist</small>
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-6">
+                  <div class="image"><img src="/assets/v2/user.png" alt=""></div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<!--/section-->
+<!--section-->
+<section class="register">
+  <div class="container">
+    <div class="registerBlock">
+      <h2> Register now</h2>
+
+      <p>Be part of the most uplifting and somithing community of creative skills.</p>
+
+      <div class="see"><a href="#">Sign me up</a></div>
+      <p><a href="#"> No, thanks. Take me Back</a></p>
+    </div>
+  </div>
+</section>
+<!--/section-->
 
