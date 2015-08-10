@@ -31,6 +31,9 @@ group :development, :test do
   gem 'spring'
   gem 'sqlite3'
   gem 'shoulda-matchers'
+  gem 'factory_girl_rails'
+  gem 'to_factory'
+
 end
 
 
