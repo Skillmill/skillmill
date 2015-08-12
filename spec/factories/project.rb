@@ -4,7 +4,7 @@ FactoryGirl.define do
     description "Architecture"
     price 1
     image { Rack::Test::UploadedFile.new(File.join(Rails.root, 'spec', 'support', 'logo.png')) }
-    user
+    association :user, factory: :customer
     category
   end
 end

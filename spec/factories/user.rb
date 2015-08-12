@@ -10,6 +10,7 @@ FactoryGirl.define do
     customer false
     password 123123123
     password_confirmation 123123123
+
     factory :creative do
       email "creative@creative.com"
       role 'creative'
